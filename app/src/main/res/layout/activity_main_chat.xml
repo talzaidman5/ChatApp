@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivityChat"
+    android:background="@drawable/background"
+    android:orientation="vertical">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:id="@+id/appBarLayout"
+        android:layout_height="wrap_content">
+
+<Toolbar
+    android:id="@+id/toolbar"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#54C5C5C5">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:id="@+id/user_item_username"
+        android:layout_marginLeft="50dp"
+        android:layout_marginRight="50dp"
+        android:textStyle="bold"
+        android:textColor="#ffff"
+        android:layout_height="wrap_content"/>
+    </Toolbar>
+    </com.google.android.material.appbar.AppBarLayout>
+
+        <androidx.viewpager.widget.ViewPager
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/view_pager"
+            android:layout_below="@id/appBarLayout"
+            android:layout_above="@id/tab_layout"
+            ></androidx.viewpager.widget.ViewPager>
+
+        <com.google.android.material.tabs.TabLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:id="@+id/tab_layout"
+            android:background="#54C5C5C5"
+            app:tabSelectedTextColor="@color/black"
+            app:tabIndicatorColor="@color/purple_500"
+            android:layout_alignParentBottom="true"
+            app:tabTextColor="@color/black"  />
+    </RelativeLayout>
